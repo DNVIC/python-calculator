@@ -7,6 +7,14 @@ def is_number(n):
         return False
     return True
 
+def ifint(n):
+    if n.is_integer() == True:
+        return int(n)
+    else:
+        return n
+
+
+
 a = 0
 while a == 0:
   
@@ -19,7 +27,7 @@ while a == 0:
     
     
 def is_rightsign(i):
-  if i == "*" or i == "x" or i == "+" or i == "-" or i == "/" or i == "÷" or i == "%":
+  if i == "*" or i == "times" or i == "multiply" or i == "x" or i == "+" or i == "plus" or i == "add" or i == "-" or i == "subtract" or i == "minus" or i == "/" or i == "÷" or i == "divide" or i == "%" or i == "modulo" or i == "mod" or i == "^" or i == "root" :
     return True
   else:
     return False
@@ -27,7 +35,7 @@ def is_rightsign(i):
 
 b = 0
 while b == 0: 
-  symbol = input("What is your symbol (must be symbol): ")
+  symbol = input("What is your symbol: ")
   if is_rightsign(symbol) == True:
     b = 1
   else: 
@@ -44,18 +52,22 @@ while c == 0:
     print("Please choose a number.")
   
 def result(a,b,c):
-  if b == "*" or b == "x":
+  if b == "*" or b == "x" or b == "times" or b == "multiply":
     return a * c
-  elif b == "+":
+  elif b == "+" or b == "plus" or b == "add":
     return a + c
-  elif b == "-":
+  elif b == "-" or b == "subtract" or b == "minus":
     return a + c
-  elif b == "/" or "÷":
+  elif b == "/" or b == "÷" or b == "divide":
     return a / c
-  elif b == "%":
+  elif b == "%" or b == "modulo" or b == "mod":
     return a % c
+  elif b == "^":
+    return a ** c
+  elif b == "root":
+    return a ** (1/c)
   else:
-    print("There might have been an error in my coding")
-print("Your equation is: " + str(firstline) + " " + str(symbol) + " " + str(secondline))
+    print("There might have been an error in my coding. Error Code 1")
+print("Your equation is: " + str(ifint(firstline)) + " " + str(symbol) + " " + str(ifint(secondline)))
 result = result(firstline, symbol, secondline)
-print("Your result is: " + str(result))
+print("Your result is: " + str(ifint(result)))
