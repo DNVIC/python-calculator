@@ -1,3 +1,5 @@
+import Math
+
 def is_number(n):
     try:
         float(n)   # Type-casting the string to `float`.
@@ -22,6 +24,14 @@ while a == 0:
   if is_number(firstline) == True:
     a = 1
     firstline = float(firstline)
+  elif:
+    if firstline == "e":
+    a = 1
+    firstline = Math.E
+  elif:
+    if firstline == "pi":
+    a = 1
+    firstline = Math.PI
   else:
     print("Please choose a number.")
     
@@ -48,6 +58,14 @@ while c == 0:
   if is_number(secondline) == True:
     c = 1
     secondline = float(secondline)
+  elif:
+    if firstline == "e":
+    c = 1
+    secondline = Math.E
+  elif:
+    if firstline == "pi":
+    c = 1
+    secondline = Math.PI
   else:
     print("Please choose a number.")
   
