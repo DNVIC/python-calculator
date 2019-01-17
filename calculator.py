@@ -1,4 +1,4 @@
-import Math
+import math
 
 def is_number(n):
     try:
@@ -24,14 +24,12 @@ while a == 0:
   if is_number(firstline) == True:
     a = 1
     firstline = float(firstline)
-  elif:
-    if firstline == "e":
+  elif firstline == "e":
     a = 1
-    firstline = Math.E
-  elif:
-    if firstline == "pi":
+    firstline = math.e
+  elif firstline == "pi":
     a = 1
-    firstline = Math.PI
+    firstline = math.pi
   else:
     print("Please choose a number.")
     
@@ -58,14 +56,12 @@ while c == 0:
   if is_number(secondline) == True:
     c = 1
     secondline = float(secondline)
-  elif:
-    if firstline == "e":
+  elif secondline == "e":
     c = 1
-    secondline = Math.E
-  elif:
-    if firstline == "pi":
+    secondline = math.e
+  elif secondline == "pi":
     c = 1
-    secondline = Math.PI
+    secondline = math.pi
   else:
     print("Please choose a number.")
   
